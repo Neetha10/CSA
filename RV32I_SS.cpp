@@ -72,7 +72,7 @@ class InsMem
             ifstream imem;
 			string line;
 			int i=0;
-			imem.open(ioDir + "\\imem.txt");
+			imem.open(ioDir + "/imem.txt");
 			if (imem.is_open())
 			{
 				while (getline(imem,line))
@@ -116,7 +116,7 @@ class DataMem
             ifstream dmem;
             string line;
             int i=0;
-            dmem.open(ioDir + "\\dmem.txt");
+            dmem.open(ioDir + "/dmem.txt");
             if (dmem.is_open())
             {
                 while (getline(dmem,line))
@@ -182,8 +182,6 @@ class RegisterFile
 
             return Registers[Reg_addr.to_ulong()];
 
-
-            // Fill in
         }
     
         void writeRF(bitset<5> Reg_addr, bitset<32> Wrt_reg_data) {
